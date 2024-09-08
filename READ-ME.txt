@@ -1,11 +1,19 @@
-  =>  Template Name    : Restoran - Bootstrap Restaurant Template
+Project Title:
+Automated CI/CD Pipeline with Jenkins, Docker, SonarQube, and GitHub for Nginx Deployment on AWS
 
-  =>  Template Link    : https://htmlcodex.com/bootstrap-restaurant-template
+Description:
+This project demonstrates setting up a fully automated CI/CD pipeline using Jenkins, Docker, and SonarQube to deploy and test an application (Nginx). The source code is hosted in GitHub, and Jenkins automatically pulls updates, builds Docker images, runs the containers, and scans the code for quality.
 
-  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+Source Code Management (GitHub):
+The source code, including the Dockerfile for deploying Nginx, is hosted in a GitHub repository.
+Jenkins is configured to trigger builds automatically on every commit using GitHub Webhooks.
 
-  =>  Template Author  : HTML Codex
+Code Quality Analysis (SonarQube):
+After the source code is pulled from GitHub, Jenkins triggers a SonarQube scan to check for code quality and vulnerabilities.
 
-  =>  Author Website   : https://htmlcodex.com
+Docker Integration:
+A Dockerfile for Nginx is part of the source code. Jenkins builds a Docker image from the source code and runs it on the Docker server.
+The container is exposed to the internet using the Docker server’s IP and port, allowing for easy access to the running Nginx instance.
 
-  =>  About HTML Codex : HTML Codex is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://htmlcodex.com/about-us )
+Deployment and Testing:
+The pipeline automatically deploys the Nginx container, and I used the Docker IP and port to verify the deployment by accessing the Nginx server through the browser.
